@@ -12,6 +12,6 @@ service 'apache2' do
 	action [ :enable, :start ] 
 	
 end
-cookbook_file	'/var/www/html'	do
+file	'/var/www/html'	do
 	source 'index.html'
 end
