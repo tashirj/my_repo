@@ -12,6 +12,7 @@ service 'apache2' do
 	action [ :enable, :start ] 
 	
 end
-file	'/var/www/html'	do
-	source 'index.html'
+file	'/var/www/html/index.html' do
+	mode '0755'
+	content '<html><body>Hit this!</body></html>'
 end
